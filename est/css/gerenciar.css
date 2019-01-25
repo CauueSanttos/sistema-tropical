@@ -1,0 +1,43 @@
+body{
+    /*background: #c2ffbf;*/
+}
+.direction{
+    text-align: center;
+}
+.limite-historico{
+    margin: 5px;
+}
+.entrada{
+    color: #033800;
+    font-weight: bold;
+}
+.saida{
+    color: red;
+    font-weight: bold;
+}
+.h3-d{
+    font-family: Farsan;
+    font-size: 35px;
+}
+.table-hover > tbody > tr:hover{
+    color: #fff;
+    background-color: #333;
+}
+table > tbody{
+    font-weight: bold;
+}
+th{
+    background-color: #066600;
+    color: white;
+}
+.pagination a{
+    color: #066600 !important;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: white !important;
+    cursor: default;
+    font-weight: bold;
+    background-color: #066600;
+    border: none;
+}

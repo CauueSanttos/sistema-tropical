@@ -1,0 +1,143 @@
+/* @author Cauê Santos */
+/* @since 16/10/2018
+/* Arquivo css index.php */
+
+/* Background */
+.background{
+    background: url(../img/background.jpg);
+    background-size: 100%;  
+    background-repeat: no-repeat;
+}
+
+/* Busca */
+.divInicial{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    margin-top: 8%;
+    width: 60%;
+    height: 40%;
+    text-align: center;
+    color: #066600;
+}
+form h2{
+    color: #066600;
+    font-family: Farsan;
+    font-size: 50pt;
+    font-weight: bold;
+}
+form input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid 1px #066600;
+}
+form input:focus{
+    border: solid 1px #ffe100;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+div form button{
+    background-color: #066600;
+    border: none;
+    padding: 10px;  
+    color: #ffe100;
+    font-weight: bold;
+}
+div form button:hover{
+    background-color: #033800;
+    color: #ffe100; 
+}
+#cadastro, #pesquisa{
+    display: none;
+}
+#hide, #show, .sair{
+    padding: 10px;
+    margin: 10px 4px 10px 0;
+    color: #ffe100;
+    background-color: #066600;
+    border: none;
+    font-weight: bold;
+}
+input, #hide, #show, .gerenciar-cliente , .gerenciar-credito:focus{
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+.quebraLinha{
+    display: block;
+    text-align: center;
+}
+.btnCad{
+    margin-top: 5px;
+}
+table, th{
+    text-align: center;
+}
+tr td button{
+    background: none;
+    outline: 0;
+    padding: 5px;  
+    border: 0 none;
+    color: red;
+    font-weight: bold;
+    font-size: 15pt;
+}
+.modal-footer{
+    text-align: left;
+}
+.align-right{
+    text-align: right;
+}
+.input-modal{
+    border: #033800 1px solid;
+}
+.input-modal:focus{
+    border: #033800 1px solid;
+}
+.display-form{
+    display: block;
+    padding: 4px;
+}
+.disable{
+    background-color: gray;
+    font-weight: bold;
+    border: 1px solid gray;
+    padding: 5px;
+}
+.disable:focus{
+    border: 1px solid gray;
+}
+.hint{
+    width: 10px;
+    margin-left: 94%;
+    margin-bottom: 2%;
+}
+.hint .hint-texto{
+    visibility: hidden;
+    width: 120px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
+}
+.hint:hover .hint-texto{
+    visibility: visible;
+}
+#cad-icon{
+    font-size: 20px;
+}
+.center-modal{
+    display: flex;
+    flex-direction: column;
+}
+.div-modal-saldo{
+    text-align: center;
+}
+.input-modal-saldo{
+    width: 69px;
+    text-align: center;
+}
