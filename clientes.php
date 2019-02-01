@@ -27,6 +27,7 @@
     $iPagina = ($iPg - 1) * $iRegistrosPorPagina;
     //////////////////////////////////////////////////////
     
+    $aDados = Array();
     $sSql = "SELECT * 
                FROM web.tbcliente 
               LIMIT {$iRegistrosPorPagina} OFFSET {$iPagina}";
@@ -49,13 +50,14 @@
         <script src="est/js/ajaxExcluir.js" type="text/javascript"></script>
     </head>
     <body>
-        <div>
+        <div id="container">
             <h3 class="direction h3-d">Clientes</h3>
             <div class="direction limite-historico">
                 <a href="inicio.php"><input class="sair" type="button" value="Voltar"></a>
             </div>
             <div class="container">
                 <div class="row">
+                <?php if(count($aDados)){ ?>
                     <table id="tabela-hist" class="table table-bordered table-hover">
                         <tr>
                             <th>Nome</th>
@@ -79,9 +81,12 @@
                                   echo "<td><a><button value='{$aLinha['clicodigo']}' class='glyphicon glyphicon-trash'></button></a></td>";
                                 echo "</tr>";
                             }
-                        ?>
+                        } else { ?>
                     </table>
-                </div>
+                    <?php 
+                        echo '<h2 style="text-align: center;">Não existe clientes na sua base de dados</h2>';
+                    } ?>
+                    </div>
                 <ul class="pagination">
                     <?php
                         for($iCont = 0; $iCont < $iTotalPaginas; $iCont++){
@@ -94,7 +99,6 @@
                             
                             echo "<li class='page-item {$sClassEstilo}'><a class='page-link' href='./clientes.php?pag={$iPag}'>{$iPag}</a></li>";
                         }
-
                     ?>
                 </ul>
             </div>

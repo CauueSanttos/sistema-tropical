@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $('.glyphicon-trash').click(function (){
         let iCodigoCliente = $(this).val();
-       
         swal({
             title: "Você tem certeza?",
             text: "Após confirmar, o cliente será excluído!",
@@ -25,13 +24,18 @@ $(document).ready(function () {
                url: 'cfg/excluirCliente.php',
                dataType: 'json',
                async: false,
+               type: 'POST',
                data:{
                    'codigoCliente': iCodigoCliente
                },
                success: function(xData){
-                   eval(xData);
+                   
                }
             });
+            
+            setInterval(function (){
+               $('#container').load('clientes.php').fadeIn('slow') ;
+            }, 1000);
         }
         
     });
